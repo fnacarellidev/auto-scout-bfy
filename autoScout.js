@@ -19,13 +19,6 @@ const enemyTeamPlayers = Array.from(enemyTeamPlayersHtml).map((param) => {
     return originalValue;
 })
 
-for (let i = 0; i < titles.length; ++i) {
-    if (titles[i].innerText.trim('\n') != 'aseila') {
-        enemyTitle = titles[i].innerText.trim('\n')
-		break ;
-	}
-}
-
 const urlParam = enemyTeamPlayers.join('%2c').replaceAll(' ', '+');
 const finalUrl = "https://www.op.gg/multisearch/br?summoners=" + urlParam;
 window.open(finalUrl)
