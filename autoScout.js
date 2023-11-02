@@ -1,8 +1,12 @@
 const titles = document.getElementsByClassName('team-details-title')
 const rosters = document.getElementsByClassName('bfy-team-details')
 
+const getTeamTitle = (roster) => {
+    return roster.getElementsByClassName('team-details-title')[0].innerText.trim();
+}
+
 for (let i = 0; i < rosters.length; ++i) {
-    if (rosters[i].innerText.trim('\n') != 'aseila') {
+	if (getTeamTitle(rosters[i]).trim('\n').trim() != 'aseila') {
         enemyTeamRoster = rosters[i]
         break ;
     }
