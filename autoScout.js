@@ -26,6 +26,6 @@ for (let i = 0; i < titles.length; ++i) {
 	}
 }
 
-const urlParam = enemyTeam.join('%2c').replaceAll(' ', '+');
+const urlParam = enemyTeamPlayers.join('%2c').replaceAll(' ', '+');
 const finalUrl = "https://www.op.gg/multisearch/br?summoners=" + urlParam;
 window.open(finalUrl)
