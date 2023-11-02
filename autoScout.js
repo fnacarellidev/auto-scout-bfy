@@ -1,13 +1,15 @@
 const titles = document.getElementsByClassName('team-details-title')
 const rosters = document.getElementsByClassName('bfy-team-details')
 
+const teamToScout = prompt("Which team do you wish to scout?")
+
 const getTeamTitle = (roster) => {
     return roster.getElementsByClassName('team-details-title')[0].innerText.trim();
 }
 
 for (let i = 0; i < rosters.length; ++i) {
 	let teamTitle = getTeamTitle(rosters[i])
-	if (teamTitle != 'aseila') {
+	if (teamTitle == teamToScout) {
         enemyTeamRoster = rosters[i]
         break ;
     }
