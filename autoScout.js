@@ -6,7 +6,7 @@ const getTeamTitle = (roster) => {
 }
 
 for (let i = 0; i < rosters.length; ++i) {
-	let teamTitle = getTeamTitle(rosters[i]).trim('\n').trim()
+	let teamTitle = getTeamTitle(rosters[i])
 	if (teamTitle != 'aseila') {
         enemyTeamRoster = rosters[i]
         break ;
