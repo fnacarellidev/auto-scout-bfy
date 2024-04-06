@@ -26,6 +26,6 @@ const enemyTeamPlayers = Array.from(enemyTeamPlayersHtml).map((param) => {
     return originalValue;
 })
 
-const urlParam = enemyTeamPlayers.join('%2C').replaceAll(' ', '+');
+const urlParam = enemyTeamPlayers.join('%2C').replaceAll(' ', '+').replaceAll('#', '%23');
 const finalUrl = "https://www.op.gg/multisearch/br?summoners=" + urlParam;
 window.open(finalUrl)
